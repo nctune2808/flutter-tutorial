@@ -1,4 +1,5 @@
 import 'package:day2/features/home/presentation/pages/home_page.dart';
+import 'package:day2/features/home/presentation/pages/test_page.dart';
 import 'package:flutter/material.dart';
 import 'injection_container.dart' as di;
 
@@ -18,6 +19,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
+      // home: TestPage(),
     );
   }
 }
