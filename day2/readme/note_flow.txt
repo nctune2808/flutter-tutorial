@@ -1,0 +1,28 @@
+Route initial: First-time user or not?
+True => Introduction Page
+False => Landing Page
+
+HasValidToken:
+True
+False
+
+|=> Introduction Page: GIF video
+
+|=> Landing Page
+|====> Quickstart Form: if for first-time user
+|====> Login Form: Everytime redirect authentication
+|====> Register Form
+|====> Validation Form
+
+
+|=> Home Page
+|====> Message Page
+|====> Notificaion Page
+
+|=> Explore Page
+
+|=> MAD Page
+
+|=> Bucket Page
+
+|=> Profile Page

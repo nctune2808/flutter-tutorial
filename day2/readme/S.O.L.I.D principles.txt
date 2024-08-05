@@ -1,0 +1,87 @@
+lib/
+|-- core/
+|   |-- error/
+|   |-- usecases/
+|   |-- utils/
+|   |-- constants/
+|-- features/
+|   |-- {'what feature'}/
+|       |-- data/
+|       |   |-- datasources/
+|       |   |-- models/
+|       |   |-- repositories/
+|       |   |-- services/
+|       |-- domain/
+|       |   |-- entities/
+|       |   |-- repositories/
+|       |   |-- services/
+|       |   |-- usecases/
+|       |-- presentation/
+|           |-- bloc/
+|           |-- pages/
+|           |-- widgets/
+|           |-- routers/
+|-- main.dart
+|-- injection_container.dart
+
+
+
+1. Core Layer
+
+|-- core/: This directory contains common code that can be shared across multiple features in the project.
+|   |
+|   |-- error/: This contains classes and files related to error handling, such as custom exceptions, 
+|   |           error codes, and error messages that are used throughout the app.
+|   |
+|   |-- usecases/: This holds the base classes or abstract definitions for use cases. 
+|   |              Use cases represent the application's business logic, handling specific tasks and 
+|   |              coordinating the interaction between the domain and data layers.
+|   |
+|   |-- utils/: This contains utility classes and functions that provide common functionality 
+|   |           such as formatting, parsing, and other helper methods that are used across the app.
+|   | 
+|   |-- constants/: This stores constant values used throughout the app, such as 
+                    API endpoints, keys, and other configuration values.
+
+
+2. Features Layer
+
+|-- features/: This directory contains the different features of the application, each encapsulated in its own folder
+|   |
+|   |-- data/: This layer is responsible for data handling. Some implements from domain layer
+|   |   |
+|   |   |-- datasources/: This contains classes that define the data sources for the feature, 
+|   |   |                 such as APIs, databases, or local/remote storage.
+|   |   | 
+|   |   |-- models/: This contains data models or data transfer objects (DTOs).
+|   |   |  {extends}
+|   |   |
+|   |   |-- repositories/: This contains the concrete implementation of repositories. 
+|   |   |   {implements}  
+|   |   |
+|   |   |-- services/: This includes the concrete implementations interfaces defined in the domain layer.
+|   |   | {implements}
+|   |   |
+|   |-- domain/: This layer contains the business logic of the application. It is completely independent.
+|   |   |
+|   |   |-- entities/: This contains entity classes which are the core data structures of the business logic.
+|   |   |
+|   |   |-- repositories/: This contains the repository interfaces.
+|   |   |    {abstract}
+|   |   |
+|   |   |-- services/: This includes service interfaces.
+|   |   |   {abstract}
+|   |   |
+|   |   |-- usecases/: This contains use cases, which encapsulate the application's business logic. 
+|   |   |              Each use case represents a specific action or functionality.
+|   |   |
+|   |-- presentation/: This layer is responsible for the UI and user interaction.
+|   |   |
+|   |   |-- bloc/: This contains the Business Logic Components (BLoCs) used for managing state in the app.
+|   |   |
+|   |   |-- pages/: This includes the different pages/screens of current feature.
+|   |   |
+|   |   |-- widgets/: This contains reusable widgets used in the presentation layer current feature.
+|   |   |
+|   |   |-- routers/: This handles navigation and routing specific to the current feature.
+|   |   |
